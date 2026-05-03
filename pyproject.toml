@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "manifold"
+version = "0.1.0"
+description = "Graph Control to Prevent Collapse From State-Space Perturbations"
+authors = ["Aditya Mangalampalli <aditya.mangalampalli@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "manifold" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.15"
+torch = ">=2.11.0,<3.0.0"
+torch-geometric = ">=2.7.0,<3.0.0"
+geoopt = "*"
+torchdiffeq = "*"
+networkx = "*"
+numpy = "*"
+matplotlib = "*"
+pyyaml = "*"
+tqdm = "*"
+python-louvain = "*"
+orjson = "^3.11.8"
+tensorboard = "^2.20.0"
+torch-tb-profiler = "^0.4.3"
+fastapi = "^0.136.1"
+uvicorn = "^0.38.0"
+ruff = "^0.15.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[tool.poetry.scripts]
+manifold-train = "manifold.cli:main"
+manifold-serve = "manifold.api.server:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

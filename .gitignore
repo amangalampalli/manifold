@@ -1,0 +1,16 @@
+.omx/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+runs/
+checkpoints/
+outputs/
+.DS_Store
+node_modules/
+dist/

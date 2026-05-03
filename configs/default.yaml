@@ -1,0 +1,47 @@
+device: auto
+seed: 7
+graph:
+  num_nodes: 48
+  num_communities: 4
+  p_in: 0.28
+  p_out: 0.04
+  edge_attr_dim: 4
+  seed: 7
+model:
+  latent_dim: 16
+  hidden_dim: 64
+  control_dim: 16
+  sheaf_lambda: 0.15
+  restriction_scale: 0.08
+  num_classes: 2
+sensing:
+  k_hop: 2
+  budget: 8
+  noise_std: 0.03
+training:
+  epochs: 5
+  trajectory_steps: 8
+  dt: 0.05
+  controller_lr: 0.001
+  source_lr: 0.001
+  source_steps: 1
+  controller_steps: 1
+  auc_weight: 1.0
+  mse_weight: 1.0
+  final_belief_mse_weight: 0.5
+  ce_weight: 0.05
+  control_energy_weight: 0.01
+  control_target_weight: 0.1
+  source_scale: 0.35
+  perturbation_mode: boundary
+  boundary_perturbation_scale: 0.5
+  boundary_perturbation_fraction: 0.35
+  boundary_center_swap: true
+  boundary_recovery_gain: 3.0
+  source_freeze_after: 3
+  source_freeze_for: 2
+  controller_residual_scale: 0.05
+  analytic_sheaf_gain: 0.0
+  analytic_community_gain: 0.0
+  analytic_topk_multiplier: 2.0
+  log_every: 1
